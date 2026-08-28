@@ -1,0 +1,288 @@
+:root {
+  --main-orange-color: #fc4f29;
+  --main-dark-color: #000000;
+  --secondary-dark-color: #252525;
+  --main-light-color: #ffffff;
+  --main-gray-color: #f5f5f5;
+  --bg-color-body: #eeeeee;
+  --shadow-orange: 0 0 10px 1px rgba(70, 70, 70, 0.39);
+  --font-principal: "Poppins", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --icon-bg-color: #1b629459;
+  --icon-color: #1572b6;
+  --fs-sm: 0.9rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-principal);
+  overflow-y: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main {
+  flex: 1;
+  min-height: 0;
+}
+
+.side-bar {
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 5rem !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.offcanvas,
+.side-bar {
+  width: 270px !important;
+}
+
+.title-option {
+  font-size: 0.8rem;
+  color: rgb(175, 175, 175);
+  margin: 0.5rem 0;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--main-dark-color);
+}
+
+.accordion-button {
+  padding: 0.6rem 0.6rem 0.6rem 0.2rem;
+}
+
+.menu-option {
+  border: none;
+  background-color: transparent;
+}
+
+.accordion-body button {
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem 0.4rem;
+  border-left: 3px solid transparent;
+}
+
+.esquema {
+  transition:
+    border 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.esquema.esquema-active {
+  border-left: 3px solid var(--main-orange-color);
+  background-color: #eeeeee;
+}
+
+.esquema:hover {
+  border-left: 3px solid var(--main-orange-color);
+}
+
+.side-bar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-bar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.side-bar::-webkit-scrollbar-thumb {
+  background-color: rgba(24, 24, 24, 0.171);
+}
+
+.side-bar-button {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.side-bar-button svg {
+  color: var(--main-dark-color);
+}
+
+.side-bar-button:hover {
+  background-color: #eeeeee;
+}
+
+.side-bar-button.active {
+  background-color: #eeeeee;
+}
+
+.content-principal {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  padding: 2rem;
+  overflow-y: auto;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  background-color: #f8f8f8d3;
+}
+
+.content-principal.start {
+  transform: scale(1);
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+.badge-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.4rem 0.7rem 0.4rem 0.4rem;
+  border-radius: 0.7rem;
+  border: 1.5px solid;
+  background-color: var(--main-light-color);
+  font-family: var(--font-principal);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #222;
+  white-space: nowrap;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.badge-code:hover {
+  transform: translateY(-2px);
+}
+
+.badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 20%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.badge-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.devicon-php-plain,
+.devicon-css3-plain,
+.devicon-html5-plain,
+.devicon-mysql-plain,
+.devicon-bootstrap-plain,
+.devicon-gradle-original,
+.devicon-apache-plain,
+.devicon-vscode-plain {
+  font-size: 1rem;
+}
+
+.badge-xampp {
+  border-color: #e34f26;
+  background-color: #e34f267c;
+}
+
+.badge-vscode {
+  border-color: #1572b6;
+  background-color: rgba(100, 148, 237, 0.219);
+}
+
+.badge-js {
+  border-color: #f0db4f;
+  background-color: #fdf7d9;
+}
+
+.badge-php {
+  border-color: #777bb4;
+  background-color: #eeeef8;
+}
+
+.badge-css3 {
+  border-color: #1572b6;
+  background-color: #e6f2fa;
+}
+
+.badge-html5 {
+  border-color: #e34f26;
+  background-color: #fbe9e4;
+}
+
+.badge-mysql {
+  border-color: #4479a1;
+  background-color: #e8f0f6;
+}
+
+.badge-phpmyadmin {
+  border-color: #6c78af;
+  background-color: #ececf6;
+}
+
+.badge-bootstrap {
+  border-color: #7952b3;
+  background-color: #f1ebf8;
+}
+
+.badge-apache {
+  border-color: #c82233;
+  background-color: #f8d8e7;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.module {
+  align-items: flex-start;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.module:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 40px;
+  aspect-ratio: 1/1;
+  background-color: #1b629459;
+  color: #1572b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subsection-desc {
+  font-size: var(--fs-sm);
+}
